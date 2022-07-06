@@ -33,8 +33,15 @@ class CarritosMemoryDAO extends IDao {
 
     saveProd(prod, cartId) {
         const cart = this.carritos.find(carrito => carrito.id === cartId)
-        cart.productos.push(prod)
-        return cart
+        if(!cart) {
+            const cart = this.create(cartId)
+            cart.productos.push(prod)
+            return cart 
+        }
+        else {
+            cart.productos.push(prod)
+            return cart
+        }
     }
 
     deleteProd(prod, cartId) {

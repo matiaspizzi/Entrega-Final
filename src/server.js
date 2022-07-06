@@ -33,7 +33,7 @@ require("./middlewares/passport.middlewares.js");
 app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
-app.use((req, next) => {
+app.use((req, _res, next) => {
     app.locals.signupMessage = req.flash("signupMessage");
     app.locals.loginMessage = req.flash("loginMessage");
     app.locals.user = req.user;
@@ -57,7 +57,7 @@ app.use("/", require("./routes/chat.routes.js"));
 app.use("/", require("./routes/publicar-productos.routes.js"));
 app.use("/", require("./routes/carrito.routes.js"));
 
-app.get("/", (res) => {
+app.get("/", (_req, res) => {
     res.redirect("/home");
 });
 

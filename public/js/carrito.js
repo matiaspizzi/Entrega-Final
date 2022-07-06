@@ -1,4 +1,4 @@
-socket.on('carrito', async productos => {
+socket.on('carrito', productos => {
     showProductsCarrito(productos).then(html => {
         document.getElementById('productosCarrito').innerHTML = html
     })
@@ -10,8 +10,13 @@ async function showProductsCarrito(carrito) {
         .then(plantilla => {
             const template = Handlebars.compile(plantilla)
             const productos = carrito.productos
-            const precioTotal = productos.reduce((total, producto) => total + producto.price, 0)
-            if (productos.length !== 0) {
+            if (productos) {
+                let precioTotal = 0
+                console.log(productos)
+                productos.forEach(producto => {
+                    precioTotal += producto.price
+                });
+                console.log(precioTotal)
                 const html = template({ productos, precioTotal })
                 return html
             } else {
