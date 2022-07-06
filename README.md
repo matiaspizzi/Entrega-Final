@@ -30,10 +30,11 @@ Iniciar test de autocannon:
 ## **Argumentos de entrada**:
 ```
     -p / --port         se utiliza para definir el puerto
-    -m / --modo         se utiliza para elegir entre fork o cluster
+    -m / --mode         se utiliza para elegir entre fork o cluster
+    -db / --database    se utiliza para elegir persistencia, mongo o memoria
 ```
 
-**Ejemplo:** node src/server.js -p=3030 -m=cluster
+**Ejemplo:** yarn start --port 8000 --mode fork --database sqlite
 
 # **Variables de entorno**
 

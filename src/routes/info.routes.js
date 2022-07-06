@@ -14,7 +14,7 @@ const info = {
     cantProcesadores: config.cantProcesadores
 }
 
-router.get('/info', (res) => {
+router.get('/info', (_req, res) => {
     res.render(path.join(process.cwd(), '/src/views/info.ejs'), { info })
 })
 

@@ -16,3 +16,92 @@
 [5/7/2022 22:38:54] [warn]: GET /publicar-producto no implementado
 [5/7/2022 22:39:05] [warn]: GET /publicar-producto no implementado
 [5/7/2022 22:39:14] [warn]: GET /publicar-producto no implementado
+[5/7/2022 23:05:17] [warn]: GET /favicon.ico no implementado
+[5/7/2022 23:09:05] [error]: Cannot read properties of undefined (reading 'getById')
+[5/7/2022 23:09:08] [error]: Cannot read properties of undefined (reading 'getById')
+[5/7/2022 23:10:00] [error]: listen EADDRINUSE: address already in use :::8000
+[5/7/2022 23:11:06] [error]: Cannot read properties of undefined (reading 'getById')
+[5/7/2022 23:11:38] [error]: listen EADDRINUSE: address already in use :::8000
+[5/7/2022 23:11:45] [error]: listen EADDRINUSE: address already in use :::8000
+[5/7/2022 23:12:24] [error]: Cannot read properties of undefined (reading 'getById')
+[5/7/2022 23:18:02] [error]: Cannot read properties of undefined (reading 'getById')
+[5/7/2022 23:44:29] [error]: Cannot read properties of undefined (reading 'getById')
+[5/7/2022 23:59:38] [error]: Cannot read properties of undefined (reading 'getById')
+[6/7/2022 00:05:59] [warn]: GET /alt=%22Card no implementado
+[6/7/2022 00:06:21] [warn]: GET /alt=%22Card no implementado
+[6/7/2022 00:06:48] [warn]: GET /alt=%22Card no implementado
+[6/7/2022 00:06:56] [warn]: GET /alt=%22Card no implementado
+[6/7/2022 00:08:52] [warn]: GET /alt=%22Card no implementado
+[6/7/2022 00:20:59] [warn]: GET /carrito/1 no implementado
+[6/7/2022 00:21:02] [error]: Cannot read properties of undefined (reading 'getById')
+[6/7/2022 00:21:18] [error]: Cannot read properties of undefined (reading 'getById')
+[6/7/2022 00:23:35] [error]: Cannot read properties of undefined (reading 'getById')
+[6/7/2022 00:25:02] [error]: Cannot read properties of undefined (reading 'getById')
+[6/7/2022 00:27:26] [error]: cart.productos is not iterable
+[6/7/2022 00:29:51] [error]: Empty .update() call detected! Update data does not contain any values to update. This will result in a faulty query. Table: carritos. Columns: .
+[6/7/2022 01:30:05] [error]: cart.productos is not iterable
+[6/7/2022 01:34:03] [error]: cart.productos is not iterable
+[6/7/2022 01:34:26] [error]: cart.productos is not iterable
+[6/7/2022 01:34:48] [error]: cart.productos is not iterable
+[6/7/2022 01:37:29] [error]: Cannot read properties of undefined (reading 'push')
+[6/7/2022 01:37:59] [error]: Cannot read properties of undefined (reading 'push')
+[6/7/2022 01:38:17] [error]: Cannot read properties of undefined (reading 'push')
+[6/7/2022 01:38:25] [error]: Cannot read properties of undefined (reading 'push')
+[6/7/2022 01:45:25] [error]: Cannot read properties of undefined (reading 'push')
+[6/7/2022 01:45:44] [error]: Cannot read properties of undefined (reading 'push')
+[6/7/2022 01:46:14] [error]: Cannot read properties of undefined (reading 'push')
+[6/7/2022 01:46:25] [error]: newCart is not defined
+[6/7/2022 01:46:40] [error]: newCart is not defined
+[6/7/2022 01:46:59] [error]: newCart is not defined
+[6/7/2022 01:47:13] [error]: newCart is not defined
+[6/7/2022 01:49:51] [error]: newCart is not defined
+[6/7/2022 01:55:10] [error]: Cannot read properties of undefined (reading 'getById')
+[6/7/2022 02:23:34] [error]: update `carritos` set `productos` = array_append(productos, 1) where `id` = '62bff5ff627f421c796114b9' - SQLITE_ERROR: no such function: array_append
+[6/7/2022 02:24:53] [error]: number 1 is not iterable (cannot read property Symbol(Symbol.iterator))
+[6/7/2022 02:25:43] [error]: number 1 is not iterable (cannot read property Symbol(Symbol.iterator))
+[6/7/2022 02:25:57] [error]: number 1 is not iterable (cannot read property Symbol(Symbol.iterator))
+[6/7/2022 02:26:20] [error]: number 1 is not iterable (cannot read property Symbol(Symbol.iterator))
+[6/7/2022 02:26:29] [error]: number 1 is not iterable (cannot read property Symbol(Symbol.iterator))
+[6/7/2022 02:26:45] [error]: newCart is not defined
+[6/7/2022 02:26:55] [warn]: GET /carrito/1 no implementado
+[6/7/2022 02:28:59] [error]: cart.productos.push is not a function
+[6/7/2022 02:34:42] [warn]: GET /carrito/1 no implementado
+[6/7/2022 02:34:46] [warn]: GET /carrito/2 no implementado
+[6/7/2022 02:34:53] [warn]: GET /carrito/1 no implementado
+[6/7/2022 02:35:04] [warn]: GET /carrito/1 no implementado
+[6/7/2022 03:29:58] [error]: Unable to detect a Project Id in the current environment. 
+To learn more about authentication and Google APIs, visit: 
+https://cloud.google.com/docs/authentication/getting-started
+[6/7/2022 03:29:58] [error]: Unable to detect a Project Id in the current environment. 
+To learn more about authentication and Google APIs, visit: 
+https://cloud.google.com/docs/authentication/getting-started
+[6/7/2022 03:29:58] [error]: Unable to detect a Project Id in the current environment. 
+To learn more about authentication and Google APIs, visit: 
+https://cloud.google.com/docs/authentication/getting-started
+[6/7/2022 03:29:58] [error]: Unable to detect a Project Id in the current environment. 
+To learn more about authentication and Google APIs, visit: 
+https://cloud.google.com/docs/authentication/getting-started
+[6/7/2022 03:29:58] [error]: Unable to detect a Project Id in the current environment. 
+To learn more about authentication and Google APIs, visit: 
+https://cloud.google.com/docs/authentication/getting-started
+[6/7/2022 03:29:58] [error]: Unable to detect a Project Id in the current environment. 
+To learn more about authentication and Google APIs, visit: 
+https://cloud.google.com/docs/authentication/getting-started
+[6/7/2022 03:29:58] [error]: Unable to detect a Project Id in the current environment. 
+To learn more about authentication and Google APIs, visit: 
+https://cloud.google.com/docs/authentication/getting-started
+[6/7/2022 03:29:58] [error]: Unable to detect a Project Id in the current environment. 
+To learn more about authentication and Google APIs, visit: 
+https://cloud.google.com/docs/authentication/getting-started
+[6/7/2022 03:29:58] [error]: Unable to detect a Project Id in the current environment. 
+To learn more about authentication and Google APIs, visit: 
+https://cloud.google.com/docs/authentication/getting-started
+[6/7/2022 03:31:58] [error]: Unable to detect a Project Id in the current environment. 
+To learn more about authentication and Google APIs, visit: 
+https://cloud.google.com/docs/authentication/getting-started
+[6/7/2022 03:31:58] [error]: Unable to detect a Project Id in the current environment. 
+To learn more about authentication and Google APIs, visit: 
+https://cloud.google.com/docs/authentication/getting-started
+[6/7/2022 03:31:58] [error]: Unable to detect a Project Id in the current environment. 
+To learn more about authentication and Google APIs, visit: 
+https://cloud.google.com/docs/authentication/getting-started

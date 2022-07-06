@@ -37,9 +37,9 @@ const clearAll = async (cartId) => {
     }
 }
 
-const saveProd = async (prod, cartId) => {
+const saveProd = async (prod, cartId, cant) => {
     try {
-        return await carritosServices.saveProd(prod, cartId)
+        return await carritosServices.saveProd(prod, cartId, cant)
     } catch (error) {
         logger.error(error)
         throw error

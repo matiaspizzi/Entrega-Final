@@ -13,8 +13,8 @@ const clearAll = async (cartId) => {
     return await CarritosDAO.clearAll(cartId)
 }
 
-const saveProd = async (prod, cartId) => {
-    return await CarritosDAO.saveProd(prod, cartId)
+const saveProd = async (prod, cartId, cant) => {
+    return await CarritosDAO.saveProd(prod, cartId, cant)
 }
 
 const deleteProd = async (prod, cartId) => {

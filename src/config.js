@@ -1,6 +1,7 @@
 require('dotenv').config()
 const MongoStore = require('connect-mongo')
 const mongoose = require('mongoose')
+const firebase = require('firebase-admin')
 const yargs = require('yargs/yargs')(process.argv.slice(2))
 const os = require('os')
 const logger = require('./utils/logger.utils.js')
@@ -14,7 +15,7 @@ const argv = yargs
 .default({
   port: process.env.PORT,
   mode: 'fork', // 'fork' o 'cluster',
-  database: 'memoria' // 'memoria', 'mongo' o 'sqlite'
+  database: 'memoria' // 'memoria', 'mongo' o 'firebase'
 })
  .argv
 
@@ -41,26 +42,35 @@ const config = {
             maxAge: 600000,
         },
     },
-    sqlite: {
-        productos:{
-            client: 'sqlite3',
-            connection: {
-                filename: `${__dirname}/DB/productos.sqlite`
-            },
-            useNullAsDefault: true
+    firebase: {
+        collections: {
+            carritos: 'carritos',
+            productos: 'productos',
+            mensajes: 'mensajes'
         },
-        mensajes:{
-            client: 'sqlite3',
-            connection: {
-                filename: `${__dirname}/DB/mensajes.sqlite`
-            },
-            useNullAsDefault: true
+        config: {
+            type : process.env.FIREBASE_TYPE,
+            project_id : process.env.FIREBASE_PROJECT_ID,
+            private_key_id : process.env.FIREBASE_PRIVATE_KEY_ID,
+            private_key : process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, '\n'),
+            client_email : process.env.FIREBASE_CLIENT_EMAIL,
+            client_id : process.env.FIREBASE_CLIENT_ID,
+            auth_uri : process.env.FIREBASE_AUTH_URI,
+            token_uri : process.env.FIREBASE_TOKEN_URI,
+            auth_provider_x509_cert_url : process.env.FIREBASE_AUTH_PROVIDER_X509_CERT_URL,
+            client_x509_cert_url : process.env.FIREBASE_CLIENT_X509_CERT_URL
         }
-    },
+    }
 }
 
 mongoose.connect(config.mongo.url, {})
     .then(logger.info('Mongo Atlas conectado'))
     .catch(err => logger.error(err))
+
+if(config.persistencia == 'firebase'){
+    firebase.initializeApp({
+        credential: firebase.credential.cert(config.firebase.config)
+    });
+}
 
 module.exports = config

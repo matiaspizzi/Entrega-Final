@@ -53,13 +53,15 @@ class CarritosMongoDAO extends IDao {
         }
     }
 
-    async saveProd(prod, cartId) {
+    async saveProd(prod, cartId, cant) {
         try {
             if (prod) {
-                await this.collection.updateOne(
-                    { id: cartId },
-                    { $push: { productos: prod } }
-                );
+                for(let i = 0; i < cant; i++) {
+                    await this.collection.updateOne(
+                        { id: cartId },
+                        { $push: { productos: prod } }
+                    );
+                }
                 return await this.getById(cartId)
             }
         } catch (error) {

@@ -1,6 +1,6 @@
 const MemoryDao = require('./productos/productos.dao.memory')
 const MongoDao = require('./productos/productos.dao.mongo')
-const SqliteDao = require('./productos/productos.dao.sqlite')
+const FirebaseDao = require('./productos/productos.dao.firebase')
 
 class ProductosFactoryDAO {
     static getPersistencia(database) {
@@ -9,8 +9,8 @@ class ProductosFactoryDAO {
                 return MemoryDao.getInstance()
             case 'mongo':
                 return MongoDao.getInstance()
-            case 'sqlite':
-                return SqliteDao.getInstance()
+            case 'firebase':
+                return FirebaseDao.getInstance()
             default:
                 return MongoDao.getInstance()
         }

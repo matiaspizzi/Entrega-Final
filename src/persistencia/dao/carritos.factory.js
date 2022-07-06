@@ -1,6 +1,6 @@
 const MemoryDao = require('./carritos/carritos.dao.memory')
 const MongoDao = require('./carritos/carritos.dao.mongo')
-const SqliteDao = require('./carritos/carritos.dao.sqlite')
+const FirebaseDao = require('./carritos/carritos.dao.firebase')
 
 class CarritosFactoryDAO {
     static getPersistencia(database) {
@@ -9,8 +9,8 @@ class CarritosFactoryDAO {
                 return MemoryDao.getInstance()
             case 'mongo':
                 return MongoDao.getInstance()
-            case 'sqlite':
-                return SqliteDao.getInstance()
+            case 'firebase':
+                return FirebaseDao.getInstance()
             default:
                 return MongoDao.getInstance()
         }

@@ -31,11 +31,13 @@ class CarritosMemoryDAO extends IDao {
         return cart
     }
 
-    saveProd(prod, cartId) {
+    saveProd(prod, cartId, cant) {
         const cart = this.carritos.find(carrito => carrito.id === cartId)
         if(!cart) {
             const cart = this.create(cartId)
-            cart.productos.push(prod)
+            for(let i = 0; i < cant; i++) {
+                cart.productos.push(prod)
+            }
             return cart 
         }
         else {
