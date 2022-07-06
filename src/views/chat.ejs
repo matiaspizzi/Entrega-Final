@@ -1,0 +1,25 @@
+<%- include("partials/head") %>
+<body id="body">
+    <%- include("partials/navbar") %>
+    <div class="container mt-3 w-50">
+        <div class="jumbotron">
+            <h1>Centro de Mensajes</h1>
+            <div id="compression"></div>
+            <hr>
+            <form action="/chat" method="post" id="formPublicarMensaje" class="form-inline" autocomplete="off">
+                <div class="form-group">
+                    <input id="inputMensaje" type="text" class="form-control my-2 mr-2" placeholder="Ingresá un mensaje..." name="mensaje" required>
+                    <button id="btnEnviar" type="submit" class="btn btn-primary my-2">Enviar!</button>
+                </div>
+            </form>
+        </div>
+        <div id="mensajes"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/socket.io/socket.io.min.js"></script>
+    <script> const socket = io(); </script>
+    <script src="https://cdn.jsdelivr.net/npm/normalizr@3.6.1/dist/normalizr.browser.min.js"></script>
+    <script src="/js/chat.js"></script>
+</body>
+</html>

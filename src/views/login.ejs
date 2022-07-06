@@ -1,0 +1,27 @@
+<%- include("partials/head") %>
+<body id="body">
+    <div class="container mt-3 w-50">
+        <div class="jumbotron">
+            <h1>Login de Usuario</h1>
+            <button class="btn btn-success mt-3" onclick="location.href='/register'">Registrarse</button>
+            <br>
+            <% if (loginMessage[0] != undefined) { %>
+                <div class="alert alert-danger mt-3" role="alert">
+                    <%= loginMessage %>
+                </div>
+            <% } %>
+            <br>
+            <form action="/login" method="post" autocomplete="off" style="width: 500px;">
+                <div class="form-group" style="padding: 5px;">
+                    <input id="email" class="form-control" type="email" placeholder="email" name="email" required>
+                </div>
+                <div class="form-group" style="padding: 5px;">
+                    <input id="password" class="form-control" type="password" placeholder="contraseña" name="password" required>
+                </div>
+                <br>
+                <button class="btn btn-success mt-3">Enviar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

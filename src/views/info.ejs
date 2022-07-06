@@ -1,0 +1,21 @@
+<%- include("partials/head") %>
+<body id="body">
+    <%- include("partials/navbar") %>
+    <div class="container mt-3 w-50">
+        <div class="jumbotron">
+            <h1>Info</h1>
+            <br>
+            <ul class="list-group">
+                <li class="list-group-item"><b>Argumentos de entrada:</b>  <%= info.args %></li>
+                <li class="list-group-item"><b>Sistema operativo:</b> <%= info.os %></li>
+                <li class="list-group-item"><b>Versión de node.js:</b> <%= info.nodev %></li>
+                <li class="list-group-item"><b>Memoria total reservada:</b> <%= info.mem %></li>
+                <li class="list-group-item"><b>Path de ejecución:</b> <%= info.path %></li>
+                <li class="list-group-item"><b>Process id:</b> <%= info.processId %></li>
+                <li class="list-group-item"><b>Carpeta del proyecto:</b> <%= info.dir %></li>
+                <li class="list-group-item"><b>Cantidad de procesadores:</b> <%= info.cantProcesadores %></li>
+              </ul>
+        </div>
+    </div>
+</body>
+</html>

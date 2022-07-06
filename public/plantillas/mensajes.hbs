@@ -1,0 +1,12 @@
+{{#if mensajes}}
+{{#each mensajes}}
+<div class="message-item">
+    <span>
+        [<span class="date">{{this.fyh}}</span>]:
+    </span>
+    <span class="avatar"><img src="{{this.autor.avatar}}" width=50 alt=""></span>
+    <span class="author" style="color: blue">{{this.autor.id}}:</span>
+    <span class="message">{{this.texto}}</span>
+</div>
+{{/each}}
+{{/if}}

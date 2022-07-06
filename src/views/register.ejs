@@ -1,0 +1,44 @@
+<%- include("partials/head") %>
+<body id="body">
+    <div class="container mt-3 w-50">
+        <div class="jumbotron">
+            <h1>Registro de Usuario</h1>
+            <button class="btn btn-success mt-3" onclick="location.href='/login'">Ingresar</button>
+            <br>
+            <% if (signupMessage[0] != undefined) { %>
+                <div class="alert alert-danger mt-3" role="alert">
+                    <%= signupMessage %>
+                </div>
+            <% } %>
+            <br>
+            <form action="/register" method="post" autocomplete="off" style="width: 500px;">
+                <div class="form-outline" style="padding: 5px;">
+                    <input id="email" class="form-control" type="email" placeholder="email" name="email" required>
+                  </div>
+                <div class="pd-telephone-input" style="padding: 5px;">
+                    <input name="name" id="name" class="form-control" type="text" placeholder="nombre" required>
+                </div>
+                <div class="form-outline" style="padding: 5px;">
+                    <input name="tel" id="tel" class="form-control" type="tel" placeholder="tel" required>
+                </div>
+                <div class="form-outline" style="padding: 5px;">
+                    <input name="address" id="address" class="form-control" type="text" placeholder="direccion" required>
+                </div>
+                <div class="form-outline" style="padding: 5px;">
+                    <input name="age" id="age" class="form-control" type="text" placeholder="edad" required>
+                </div>
+                <div class="form-outline" style="padding: 5px;">
+                    <input name="avatar" id="avatar" class="form-control" type="text" placeholder="avatar" required>
+                </div>
+                <div class="form-outline" style="padding: 5px;">
+                    <input name="password" id="password" class="form-control" type="password" placeholder="password" name="password" required>
+                </div>
+                <button class="btn btn-success mt-3">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/js/intTelInput/intlTelInput.min.js"></script>
+    <script src="/js/intTelInput/config.js"></script>
+</body>
+</html>

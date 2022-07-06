@@ -1,0 +1,21 @@
+<%- include("partials/head") %>
+<body id="body">
+    <%- include("partials/navbar") %>
+    <div class="container mt-3 w-50">
+        <div class="jumbotron">
+            <h1>Perfil</h1>
+            <br>
+            <img src="<%= user.avatar %>" width=200 alt="">
+            <br>
+            <ul class="list-group">
+                <li class="list-group-item"><b>Nombre:</b> <%= user.name %></li>
+                <li class="list-group-item"><b>Correo electronico:</b> <%= user.email %></li>
+                <li class="list-group-item"><b>Telefono:</b> <%= user.tel %></li>
+                <li class="list-group-item"><b>Direccion:</b> <%= user.address %></li>
+                <li class="list-group-item"><b>Edad:</b> <%= user.age %></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+

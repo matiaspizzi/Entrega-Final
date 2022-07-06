@@ -1,0 +1,12 @@
+[2/7/2022 04:04:13] [warn]: GET /favicon.ico no implementado
+[2/7/2022 04:04:19] [error]: Cannot read properties of undefined (reading 'find')
+[2/7/2022 04:07:29] [warn]: GET /asd no implementado
+[2/7/2022 04:07:42] [error]: Cannot read properties of undefined (reading 'productos')
+[2/7/2022 04:35:18] [error]: table.object is not a function
+[2/7/2022 04:38:39] [error]: insert into `carritos` (`id`, `productos`) values ('m@p.com', ) - SQLITE_ERROR: table carritos has no column named productos
+[2/7/2022 04:39:23] [error]: table.array is not a function
+[2/7/2022 04:39:26] [error]: table.array is not a function
+[2/7/2022 04:42:51] [error]: insert into `carritos` (`id`, `productos`) values ('m@a.com', ) - SQLITE_MISMATCH: datatype mismatch
+[5/7/2022 21:07:15] [warn]: GET /favicon.ico no implementado
+[5/7/2022 21:36:49] [warn]: GET /favicon.ico no implementado
+[5/7/2022 21:41:18] [error]: Cannot read properties of undefined (reading 'getById')
