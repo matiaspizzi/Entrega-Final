@@ -13,7 +13,7 @@ async function showProductsCarrito(productos) {
             if (productos.length > 0) {
                 let precioTotal = 0
                 productos.forEach(producto => {
-                    precioTotal += producto.price
+                    precioTotal += (producto.price*producto.cantidad)
                 });
                 const html = template({ productos, precioTotal })
                 return html

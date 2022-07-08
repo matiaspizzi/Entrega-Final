@@ -55,20 +55,26 @@ class CarritosMongoDAO extends IDao {
 
     async saveProd(prod, cartId, cant) {
         const cart = await this.getById(cartId)
-        if (!cart) {
-            await this.create(cartId)
+        const newProd = {
+            id: prod.id,
+            title: prod.title,
+            price: prod.price,
+            cantidad: cant,
+            thumbnail: prod.thumbnail
         }
+        if (!cart) await this.create(cartId)
         try {
             if (prod.id) {
-                for(let i = 0; i < cant; i++) {
-                    await this.collection.updateOne(
-                        { id: cartId },
-                        { $push: { productos: prod } }
-                    );
-                }
-                return await this.getById(cartId)
+                const index = cart.productos.findIndex(e => e.id == prod.id)
+                if (index > -1) cart.productos[index].cantidad += cant 
+                else cart.productos.push(newProd)
             }
-        } catch (error) {
+            await this.collection.updateOne(
+                { id: cartId }, { $set: { productos: cart.productos } }
+            )
+                return await this.getById(cartId)
+        }
+        catch (error) {
             logger.error(error)
             return error;
         }
@@ -79,34 +85,8 @@ class CarritosMongoDAO extends IDao {
             const cart = await this.getById(cartId)
             const index = cart.productos.findIndex(e => e.id == prod.id)
             if (index > -1) {
-                await this.collection.updateOne(
-                    { id: cartId },
-                    [
-                        {
-                            $set: {
-                                productos: {
-                                    $let: {
-                                        vars: { ix: { $indexOfArray: ["$productos", prod] } },
-                                        in: {
-                                            $cond: [{ $eq: ["$$ix", 0] }, {
-                                                $concatArrays: [
-                                                    { $slice: ["$productos", "$$ix"] },
-                                                    { $slice: ["$productos", { $add: [1, "$$ix"] }, { $size: "$productos" }] }
-                                                ]
-                                            },
-                                            {
-                                                $concatArrays: [
-                                                    { $slice: ["$productos", 0, "$$ix"] },
-                                                    { $slice: ["$productos", { $add: [1, "$$ix"] }, { $size: "$productos" }] }
-                                                ]
-                                            }
-                                            ]
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    ])
+                cart.productos.splice(index, 1)
+                await this.collection.updateOne({ id: cartId }, { $set: { productos: cart.productos } })
                 return await this.getById(cartId)
             }
         } catch (error) {

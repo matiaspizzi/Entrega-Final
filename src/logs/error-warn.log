@@ -199,3 +199,22 @@ https://cloud.google.com/docs/authentication/getting-started
 [8/7/2022 04:32:08] [error]: Cannot read properties of undefined (reading 'productos')
 [8/7/2022 04:32:37] [error]: Cannot read properties of undefined (reading 'id')
 [8/7/2022 04:33:07] [error]: Cannot read properties of undefined (reading 'productos')
+[8/7/2022 13:36:39] [warn]: GET /favicon.ico no implementado
+[8/7/2022 13:47:59] [error]: Third argument to $slice must be positive: -1
+[8/7/2022 13:48:00] [error]: Third argument to $slice must be positive: -1
+[8/7/2022 13:48:01] [error]: Third argument to $slice must be positive: -1
+[8/7/2022 13:49:02] [error]: Third argument to $slice must be positive: -1
+[8/7/2022 13:49:03] [error]: Third argument to $slice must be positive: -1
+[8/7/2022 13:49:48] [error]: Third argument to $slice must be positive: -1
+[8/7/2022 13:53:44] [error]: co is not defined
+[8/7/2022 14:51:07] [error]: _doc is not defined
+[8/7/2022 14:52:33] [error]: newProd is not defined
+[8/7/2022 14:52:45] [warn]: GET /carrito/1/add no implementado
+[8/7/2022 15:08:14] [error]: Assignment to constant variable.
+[8/7/2022 15:10:23] [error]: Cannot read properties of undefined (reading 'productos')
+[8/7/2022 15:12:20] [error]: newProd is not defined
+[8/7/2022 15:15:00] [warn]: GET /alt=%22Card no implementado
+[8/7/2022 15:15:29] [warn]: GET /alt=%22Card no implementado
+[8/7/2022 15:47:36] [error]: Cannot read properties of undefined (reading 'productos')
+[8/7/2022 15:48:16] [error]: Assignment to constant variable.
+[8/7/2022 15:53:19] [error]: Cannot read properties of undefined (reading 'productos')

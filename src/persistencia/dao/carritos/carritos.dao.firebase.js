@@ -57,12 +57,20 @@ class CarritosFirebaseDAO extends IDao {
 
     async saveProd(prod, cartId, cant) {
         try {
-            const cart = await this.getById(cartId)
+            let cart = await this.getById(cartId)
             if(!cart) await this.create(cartId)
-            for(let i = 0; i < cant; i++) {
-                cart.productos.push(prod)
-                console.log(cart.productos)
+            cart = await this.getById(cartId)
+            const newProd = {
+                id: prod.id,
+                title: prod.title,
+                price: prod.price,
+                cantidad: cant,
+                thumbnail: prod.thumbnail
             }
+            const prodIndex = cart.productos.findIndex(p => p.id === prod.id)
+            if (prodIndex !== -1) cart.productos[prodIndex].cantidad += cant
+            else cart.productos.push(newProd)
+
             await this.collection.doc(cartId).update(cart)
             return await this.getById(cartId)
         } catch (error) {

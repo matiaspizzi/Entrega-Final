@@ -4,7 +4,11 @@ const carritoSchema = new Schema(
     {
         productos: {
             type: Array,
-            required: true
+            required: true,
+            cantidad: {
+                type: Number,
+                required: true
+            }
         },
         id: {
             type: String,

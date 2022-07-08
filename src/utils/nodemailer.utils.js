@@ -32,6 +32,7 @@ const mailerNewOrder = (productos, user) => {
         return `<tr>
             <td>${producto.title}</td>
             <td>${producto.price}</td>
+            <td>x${producto.cantidad}</td>
             <td>${stringId}</td>
         </tr>`
     }).join('')
@@ -45,12 +46,13 @@ const mailerNewOrder = (productos, user) => {
             <tr>
                 <th>Producto</th>
                 <th>Precio</th>
+                <th>Cantidad</th>
                 <th>Id</th>
             </tr>
             ${productosHtml}
         </table>
         <hr>
-        <p>Total: $${productos.reduce((total, producto) => total + producto.price, 0)}</p>`
+        <p>Total: $${productos.reduce((total, producto) => total + (producto.price * producto.cantidad), 0)}</p>`
     })
 }
 
