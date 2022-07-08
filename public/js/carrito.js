@@ -1,22 +1,20 @@
-socket.on('carrito', productos => {
-    showProductsCarrito(productos).then(html => {
-        document.getElementById('productosCarrito').innerHTML = html
-    })
-})
 
-async function showProductsCarrito(carrito) {
+socket.on("carrito", (productos) => {
+    showProductsCarrito(productos).then((html) => {
+        document.getElementById("listaProductosCarritos").innerHTML = html;
+    });
+});
+
+async function showProductsCarrito(productos) {
     return await fetch('../plantillas/carritoProductos.hbs')
         .then(respuesta => respuesta.text())
         .then(plantilla => {
             const template = Handlebars.compile(plantilla)
-            const productos = carrito.productos
-            if (productos) {
+            if (productos.length > 0) {
                 let precioTotal = 0
-                console.log(productos)
                 productos.forEach(producto => {
                     precioTotal += producto.price
                 });
-                console.log(precioTotal)
                 const html = template({ productos, precioTotal })
                 return html
             } else {
@@ -25,19 +23,4 @@ async function showProductsCarrito(carrito) {
                 </h2>`
             }
         })
-}
-
-function removeProduct(productId) {
-    socket.emit('removeProduct', productId)
-}
-
-function addProduct(productId) {
-    socket.emit('addProduct', productId)
-}
-
-function checkout() {
-    socket.emit('checkout')
-    document.getElementById('productosCarrito').innerHTML = `<h1 class="alert alert-success">
-        Pedido de compra enviado. Muchas gracias!
-    </h1>`
 }

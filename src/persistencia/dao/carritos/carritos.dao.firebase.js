@@ -58,8 +58,10 @@ class CarritosFirebaseDAO extends IDao {
     async saveProd(prod, cartId, cant) {
         try {
             const cart = await this.getById(cartId)
+            if(!cart) await this.create(cartId)
             for(let i = 0; i < cant; i++) {
                 cart.productos.push(prod)
+                console.log(cart.productos)
             }
             await this.collection.doc(cartId).update(cart)
             return await this.getById(cartId)
@@ -79,10 +81,8 @@ class CarritosFirebaseDAO extends IDao {
                     const newCart = { ...cart, timestamp: Date.now() }
                     await this.collection.doc(cartId).update(newCart)
                     return await this.getById(cartId)
-                } else {
-                    return { error: `Producto ${prod.id} no encontrado` }
                 }
-            } else return cart
+            }
         } catch (error) {
             logger.error(error)
             return error;
@@ -94,7 +94,6 @@ class CarritosFirebaseDAO extends IDao {
             const doc = await this.collection.doc(id).get();
             const data = doc.data();
             if (data) return data
-            else return { error: `carrito ${id} no encontrado` }
         } catch (error) {
             logger.error(error)
             return error;

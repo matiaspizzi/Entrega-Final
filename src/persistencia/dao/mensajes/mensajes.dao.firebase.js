@@ -55,7 +55,6 @@ class MensajesFirebaseDAO extends IDao{
             const doc = await this.collection.doc(id).get();
             const data = doc.data();
             if (data) return data
-            else return { error: `mensaje ${id} no encontrado` }
         } catch (error) {
             logger.error(error)
             return error;

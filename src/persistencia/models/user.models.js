@@ -21,4 +21,4 @@ userSchema.methods.matchPassword = (password, hash) => {
     return bcrypt.compareSync(password, hash)
 }
 
-module.exports = mongoose.model(config.mongo.collectionNameUsers, userSchema)
+module.exports = mongoose.model(config.mongo.collections.users, userSchema)

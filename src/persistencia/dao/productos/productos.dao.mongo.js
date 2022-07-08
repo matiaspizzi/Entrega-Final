@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const productoSchema = require("../../models/producto.models");
+const productoSchema = require("../../models/producto.models.js");
 const config = require("../../../config");
 const IDao = require('../IDao')
 const logger = require("../../../utils/logger.utils");
@@ -9,7 +9,7 @@ let productMongoInstance = null;
 class ProductosMongoDAO extends IDao {
     constructor() {
         super()
-        this.collection = mongoose.model(config.mongo.collectionProducts, productoSchema);
+        this.collection = mongoose.model(config.mongo.collections.productos, productoSchema);
     }
 
     static getInstance() {
@@ -51,9 +51,7 @@ class ProductosMongoDAO extends IDao {
     async getById(id) {
         try {
             const elem = await this.collection.find({ id: id });
-            if (elem[0]) {
-                return elem[0]
-            } else { return { error: `Producto ${id} no encontrado` } }
+            if (elem[0]) return elem[0]
         } catch (error) {
             logger.error(error)
             return error;

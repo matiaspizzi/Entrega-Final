@@ -105,3 +105,97 @@ https://cloud.google.com/docs/authentication/getting-started
 [6/7/2022 03:31:58] [error]: Unable to detect a Project Id in the current environment. 
 To learn more about authentication and Google APIs, visit: 
 https://cloud.google.com/docs/authentication/getting-started
+[6/7/2022 03:34:35] [error]: Cannot read properties of undefined (reading 'push')
+[6/7/2022 03:35:19] [error]: Cannot read properties of undefined (reading 'push')
+[6/7/2022 16:13:17] [warn]: GET /favicon.ico no implementado
+[8/7/2022 01:51:19] [warn]: GET /favicon.ico no implementado
+[8/7/2022 02:18:49] [warn]: GET /carrito/2 no implementado
+[8/7/2022 02:19:08] [warn]: GET /carrito/2 no implementado
+[8/7/2022 02:19:13] [warn]: GET /carrito/2 no implementado
+[8/7/2022 02:20:01] [warn]: GET /carrito/1 no implementado
+[8/7/2022 02:20:05] [warn]: GET /carrito/1 no implementado
+[8/7/2022 02:20:31] [warn]: GET /carrito/2 no implementado
+[8/7/2022 02:21:46] [warn]: GET /carrito/2 no implementado
+[8/7/2022 02:22:39] [warn]: GET /carrito/2 no implementado
+[8/7/2022 02:23:14] [warn]: GET /carrito/2 no implementado
+[8/7/2022 02:23:17] [warn]: GET /carrito/2 no implementado
+[8/7/2022 02:23:39] [warn]: GET /carrito/2 no implementado
+[8/7/2022 02:24:22] [warn]: GET /carrito/1 no implementado
+[8/7/2022 02:33:39] [warn]: GET /carrito/2 no implementado
+[8/7/2022 02:35:10] [warn]: GET /carrito/1 no implementado
+[8/7/2022 02:36:09] [warn]: GET /alt=%22Card no implementado
+[8/7/2022 02:36:16] [warn]: GET /alt=%22Card no implementado
+[8/7/2022 02:36:19] [warn]: GET /carrito/2 no implementado
+[8/7/2022 02:36:22] [warn]: GET /alt=%22Card no implementado
+[8/7/2022 02:36:25] [warn]: GET /carrito/alt=%22Card no implementado
+[8/7/2022 02:36:29] [warn]: GET /carrito/alt=%22Card no implementado
+[8/7/2022 02:36:30] [warn]: GET /carrito/carrito/ no implementado
+[8/7/2022 02:36:33] [warn]: GET /carrito/alt=%22Card no implementado
+[8/7/2022 02:36:34] [warn]: GET /carrito/carrito/2 no implementado
+[8/7/2022 02:36:35] [warn]: GET /carrito/alt=%22Card no implementado
+[8/7/2022 02:36:40] [warn]: GET /carrito/carrito/2 no implementado
+[8/7/2022 02:36:42] [warn]: GET /carrito/alt=%22Card no implementado
+[8/7/2022 02:36:42] [warn]: GET /carrito/alt=%22Card no implementado
+[8/7/2022 02:36:49] [warn]: GET /alt=%22Card no implementado
+[8/7/2022 02:39:35] [warn]: GET /alt=%22Card no implementado
+[8/7/2022 02:50:23] [error]: Cast to Number failed for value "checkout" (type string) at path "id" for model "productos"
+[8/7/2022 02:50:53] [warn]: GET /alt=%22Card no implementado
+[8/7/2022 02:51:25] [warn]: GET /alt=%22Card no implementado
+[8/7/2022 02:51:28] [warn]: GET /alt=%22Card no implementado
+[8/7/2022 02:51:30] [warn]: GET /carrito/alt=%22Card no implementado
+[8/7/2022 02:52:44] [warn]: GET /carrito/alt=%22Card no implementado
+[8/7/2022 02:52:53] [warn]: GET /carrito/alt=%22Card no implementado
+[8/7/2022 02:53:11] [warn]: GET /carrito/alt=%22Card no implementado
+[8/7/2022 02:53:19] [warn]: GET /carrito/alt=%22Card no implementado
+[8/7/2022 02:53:22] [warn]: GET /carrito/alt=%22Card no implementado
+[8/7/2022 02:53:36] [warn]: GET /carrito/alt=%22Card no implementado
+[8/7/2022 02:53:40] [warn]: GET /carrito/alt=%22Card no implementado
+[8/7/2022 02:54:32] [warn]: GET /alt=%22Card no implementado
+[8/7/2022 02:54:52] [warn]: GET /alt=%22Card no implementado
+[8/7/2022 02:54:54] [warn]: GET /alt=%22Card no implementado
+[8/7/2022 02:54:58] [warn]: GET /alt=%22Card no implementado
+[8/7/2022 02:55:49] [error]: Cannot read properties of undefined (reading 'id')
+[8/7/2022 03:12:30] [warn]: GET /carrito/1 no implementado
+[8/7/2022 03:13:03] [warn]: GET /carrito/1 no implementado
+[8/7/2022 03:13:06] [warn]: GET /carrito/1 no implementado
+[8/7/2022 03:13:22] [error]: Cast to Number failed for value "checkout" (type string) at path "id" for model "productos"
+[8/7/2022 03:13:54] [error]: Cast to Number failed for value "checkout" (type string) at path "id" for model "productos"
+[8/7/2022 03:13:54] [warn]: GET /alt=%22Card no implementado
+[8/7/2022 03:14:06] [error]: Cast to Number failed for value "checkout" (type string) at path "id" for model "productos"
+[8/7/2022 03:14:44] [warn]: GET /alt=%22Card no implementado
+[8/7/2022 03:18:03] [warn]: GET /carrito/1 no implementado
+[8/7/2022 03:21:42] [error]: Cast to Number failed for value "checkout" (type string) at path "id" for model "productos"
+[8/7/2022 03:22:25] [warn]: GET /alt=%22Card no implementado
+[8/7/2022 03:22:34] [error]: Cast to Number failed for value "checkout" (type string) at path "id" for model "productos"
+[8/7/2022 03:22:34] [warn]: GET /alt=%22Card no implementado
+[8/7/2022 03:23:03] [error]: Cast to Number failed for value "checkout" (type string) at path "id" for model "productos"
+[8/7/2022 03:23:49] [error]: Cast to Number failed for value "checkout" (type string) at path "id" for model "productos"
+[8/7/2022 03:25:16] [error]: Cast to Number failed for value "checkout" (type string) at path "id" for model "productos"
+[8/7/2022 03:25:36] [error]: Cast to Number failed for value "checkout" (type string) at path "id" for model "productos"
+[8/7/2022 03:26:15] [error]: Cast to Number failed for value "checkout" (type string) at path "id" for model "productos"
+[8/7/2022 03:26:19] [warn]: GET /alt=%22Card no implementado
+[8/7/2022 03:26:21] [warn]: POST /carrito//delete no implementado
+[8/7/2022 03:28:37] [error]: Cast to Number failed for value "checkout" (type string) at path "id" for model "productos"
+[8/7/2022 03:36:35] [error]: Cast to Number failed for value "checkout" (type string) at path "id" for model "productos"
+[8/7/2022 03:42:26] [error]: Cast to Number failed for value "checkout" (type string) at path "id" for model "productos"
+[8/7/2022 03:42:41] [error]: Cast to Number failed for value "checkout" (type string) at path "id" for model "productos"
+[8/7/2022 03:49:26] [error]: Cast to Number failed for value "checkout" (type string) at path "id" for model "productos"
+[8/7/2022 03:52:23] [error]: Cast to Number failed for value "checkout" (type string) at path "id" for model "productos"
+[8/7/2022 03:52:59] [error]: Cast to Number failed for value "checkout" (type string) at path "id" for model "productos"
+[8/7/2022 03:53:01] [error]: Cast to Number failed for value "checkout" (type string) at path "id" for model "productos"
+[8/7/2022 03:53:25] [error]: Cast to Number failed for value "checkout" (type string) at path "id" for model "productos"
+[8/7/2022 03:53:30] [error]: Cast to Number failed for value "checkout" (type string) at path "id" for model "productos"
+[8/7/2022 03:53:41] [error]: Cast to Number failed for value "checkout" (type string) at path "id" for model "productos"
+[8/7/2022 03:53:46] [warn]: GET /carrito/checkout no implementado
+[8/7/2022 03:53:50] [error]: Cast to Number failed for value "checkout" (type string) at path "id" for model "productos"
+[8/7/2022 03:53:58] [error]: Cast to Number failed for value "checkout" (type string) at path "id" for model "productos"
+[8/7/2022 03:58:05] [error]: Cannot read properties of undefined (reading 'productos')
+[8/7/2022 03:59:33] [error]: Cannot read properties of undefined (reading 'id')
+[8/7/2022 03:59:46] [error]: Cannot read properties of undefined (reading 'productos')
+[8/7/2022 04:00:19] [error]: Update() requires either a single JavaScript object or an alternating list of field/value pairs that can be followed by an optional precondition. Value for argument "dataOrField" is not a valid Firestore value. Cannot use "undefined" as a Firestore value (found in field "productos.`2`"). If you want to ignore undefined values, enable `ignoreUndefinedProperties`.
+[8/7/2022 04:02:10] [error]: Cannot read properties of undefined (reading 'productos')
+[8/7/2022 04:11:58] [warn]: GET /carrito/2 no implementado
+[8/7/2022 04:31:20] [error]: Cannot read properties of undefined (reading 'productos')
+[8/7/2022 04:32:08] [error]: Cannot read properties of undefined (reading 'productos')
+[8/7/2022 04:32:37] [error]: Cannot read properties of undefined (reading 'id')
+[8/7/2022 04:33:07] [error]: Cannot read properties of undefined (reading 'productos')

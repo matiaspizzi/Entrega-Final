@@ -28,10 +28,11 @@ const mailerNewUser = (newUser) => {
 
 const mailerNewOrder = (productos, user) => {
     const productosHtml = productos.map(producto => {
+        stringId = `${producto.id}`
         return `<tr>
             <td>${producto.title}</td>
             <td>${producto.price}</td>
-            <td>${producto.id}</td>
+            <td>${stringId}</td>
         </tr>`
     }).join('')
 

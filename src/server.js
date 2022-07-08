@@ -11,8 +11,6 @@ const http = require("http");
 const { Server: Socket } = require("socket.io");
 const { sessionMiddleware, wrap } = require("./middlewares/session.middlewares.js");
 const User = require("./persistencia/models/user.models.js");
-const { mailerNewOrder } = require("./utils/nodemailer.utils.js");
-const { twilioAdmin, twilioBuyer } = require("./utils/twilio.utils.js");
 
 const app = express();
 const server = http.createServer(app);
@@ -101,25 +99,10 @@ io.on("connection", async (socket) => {
         io.sockets.emit("mensajes", await mensajesController.getAll());
     });
     //Carrito
-    socket.emit("carrito", await carritosController.getById(user.email));
-    socket.on("addProduct", async (productId) => {
-        const prod = await productosController.getById(productId);
-        await carritosController.saveProd(prod, user.email);
-        io.sockets.emit("carrito", await carritosController.getById(user.email));
-    });
-    socket.on("removeProduct", async (productId) => {
-        const prod = await productosController.getById(productId);
-        await carritosController.deleteProd(prod, user.email);
-        io.sockets.emit("carrito", await carritosController.getById(user.email));
-    });
-    socket.on("checkout", async () => {
-        const carrito = await carritosController.getById(user.email);
-        const productos = carrito.productos;
-        mailerNewOrder(productos, user);
-        twilioAdmin(user);
-        twilioBuyer(user.tel);
-        await carritosController.clearAll(user.email);
-    });
+    const carrito = await carritosController.getById(user.email)
+    let productos =[]
+    if(carrito) productos = carrito.productos
+    socket.emit("carrito", productos);
 });
 
 // Iniciar servidor

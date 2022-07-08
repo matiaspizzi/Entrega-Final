@@ -28,10 +28,12 @@ const config = {
     mongo: {
         url: process.env.MONGO_ATLAS_URL,
         database: "tercer_entrega",
-        collectionNameUsers: "users",
-        collectionNameCarritos: "carritos",
-        collectionNameProductos: "productos",
-        collectionNameMensajes: "mensajes",
+        collections: {
+            users: "users",
+            carritos: "carritos",
+            productos: "productos",
+            mensajes: "mensajes",
+        }
     },
     session: {
         store: MongoStore.create({ mongoUrl: `${process.env.MONGO_ATLAS_URL}`}),

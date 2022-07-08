@@ -1,4 +1,4 @@
-socket.on("productos", async (productos) => {
+socket.on("productos", (productos) => {
     // const res = await fetch(`http://localhost:8080/api/productos-test`)
     // const prodsMock = await res.json()
     // const arrayProd =  prodsMock.concat(productos)

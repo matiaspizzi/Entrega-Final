@@ -33,29 +33,26 @@ class CarritosMemoryDAO extends IDao {
 
     saveProd(prod, cartId, cant) {
         const cart = this.carritos.find(carrito => carrito.id === cartId)
-        if(!cart) {
-            const cart = this.create(cartId)
-            for(let i = 0; i < cant; i++) {
-                cart.productos.push(prod)
-            }
-            return cart 
+        if(cart == undefined) {
+            this.create(cartId)
         }
-        else {
+        for(let i = 0; i < cant; i++) {
+            const cart = this.carritos.find(carrito => carrito.id === cartId)
             cart.productos.push(prod)
-            return cart
         }
+        return cart 
     }
 
     deleteProd(prod, cartId) {
         const cart = this.carritos.find(carrito => carrito.id === cartId)
-        cart.productos = cart.productos.filter(product => product.id !== prod.id)
+        const index = cart.productos.indexOf(product => product.id == prod.id)
+        cart.productos.splice(index, 1)
         return cart
     }
     
     getById(id) {
         const cart = this.carritos.find(cart => cart.id == id)
-        if(!cart) { return { error: `Carrito ${id} no encontrado` } }
-        else { return cart }
+        if (cart) return cart 
     }
 
     deleteById(id) {

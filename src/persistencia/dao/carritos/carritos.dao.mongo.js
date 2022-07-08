@@ -9,19 +9,19 @@ let carritoMongoInstance = null;
 class CarritosMongoDAO extends IDao {
     constructor() {
         super()
-        this.collection = mongoose.model(config.mongo.collectionCarritos, carritoSchema);
+        this.collection = mongoose.model(config.mongo.collections.carritos, carritoSchema);
     }
 
     static getInstance() {
-        if (!productMongoInstance) {
+        if (!carritoMongoInstance) {
             carritoMongoInstance = new CarritosMongoDAO()
         }
         return carritoMongoInstance;
     }
 
-    async create(userId) {
+    async create(cartId) {
         try {
-            const newElem = { productos: [], id: userId };
+            const newElem = { productos: [], id: cartId };
             const elem = await this.collection(newElem);
             await elem.save();
             return await this.getAll();
@@ -54,8 +54,12 @@ class CarritosMongoDAO extends IDao {
     }
 
     async saveProd(prod, cartId, cant) {
+        const cart = await this.getById(cartId)
+        if (!cart) {
+            await this.create(cartId)
+        }
         try {
-            if (prod) {
+            if (prod.id) {
                 for(let i = 0; i < cant; i++) {
                     await this.collection.updateOne(
                         { id: cartId },
@@ -74,9 +78,7 @@ class CarritosMongoDAO extends IDao {
         try {
             const cart = await this.getById(cartId)
             const index = cart.productos.findIndex(e => e.id == prod.id)
-            if (index == -1) {
-                return { error: `producto ${prod.id} no encontrado` }
-            } else {
+            if (index > -1) {
                 await this.collection.updateOne(
                     { id: cartId },
                     [
@@ -119,7 +121,6 @@ class CarritosMongoDAO extends IDao {
             if (elem[0]) {
                 return elem[0]
             }
-            else return { error: `carrito ${id} no encontrado` }
         } catch (error) {
             logger.error(error)
             return error;
@@ -132,8 +133,6 @@ class CarritosMongoDAO extends IDao {
             if (cart.id) {
                 await this.collection.deleteOne(cart);
                 return await this.getAll()
-            } else {
-                return { error: `carrito ${id} no encontrado` }
             }
         } catch (error) {
             logger.error(error)

@@ -25,11 +25,11 @@ class MessagesMemoryDAO extends IDao {
     }
     
     getById(id) {
-        return this.messages.find(product => product.id === id)
+        return this.messages.find(data => data.id === id)
     }
 
     deleteById(id) {
-        return this.messages = this.messages.filter(product => product.id !== id)
+        return this.messages = this.messages.filter(data => data.id !== id)
     }
 
     deleteAll() {

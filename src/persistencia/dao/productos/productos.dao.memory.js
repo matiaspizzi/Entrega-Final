@@ -27,8 +27,7 @@ class ProductosMemoryDAO extends IDao {
     
     getById(id) {
         const product = this.products.find(product => product.id == id)
-        if(!product) { return { error: `Producto ${id} no encontrado` } }
-        else { return product }
+        if(product) return product
     }
 
     deleteById(id) {
