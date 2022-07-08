@@ -8,33 +8,33 @@
 # **Tercer Entrega**
 [![Coderhouse](./logo_coderhouse.png)](https://www.coderhouse.com/)
 
-* La tercer entrega del curso de **Back End** de [CoderHouse](https://www.coderhouse.com/) consiste en funcionalidades de un e-commerce basado en [node](http://nodejs.org) y [express](https://www.npmjs.com/package/express).
+* La entrega final del curso de **Back End** de [CoderHouse](https://www.coderhouse.com/) consiste en funcionalidades de un e-commerce basado en [node](http://nodejs.org) y [express](https://www.npmjs.com/package/express).
 # **Instalación**
 
 ## 1- Clona este repositorio
 
-En la consola de **Git**: `git clone https://github.com/ron2452/tercer-entrega.git`
+En la consola de **Git**: `git clone https://github.com/ron2452/entrega-final.git`
 
 ## 2- Instala las dependencias
 
 En la consola del proyecto: `npm i --save`
 ## **Scripts**
 
-Iniciar la app:
-`npm start`
+Iniciar la app con forever:
+`yarn start`
 Iniciar la app con nodemon:
-`npm dev`
+`yarn dev`
 Iniciar test de autocannon:
-`npm test`
+`yarn test`
 
 ## **Argumentos de entrada**:
 ```
-    -p / --port         se utiliza para definir el puerto
-    -m / --mode         se utiliza para elegir entre fork o cluster
-    -db / --database    se utiliza para elegir persistencia, mongo o memoria
+    --p / --port         se utiliza para definir el puerto
+    --m / --mode         se utiliza para elegir entre fork o cluster
+    --db / --database    se utiliza para elegir persistencia, mongo o memoria
 ```
 
-**Ejemplo:** yarn start --port 8000 --mode fork --database sqlite
+**Ejemplo:** yarn start --port 8080 --mode fork --database mongo
 
 # **Variables de entorno**
 
@@ -54,6 +54,19 @@ TWILIO_ACCOUNT_SID= (Account sid de Twilio)
 TWILIO_AUTH_TOKEN= (Auth token de Twilio)
 TWILIO_PHONE= (Numero de telefono de Twilio)
 PHONE_ADMIN= (Numero del administrador con prefijo internacional incluido)
+
+(Datos de firestore)
+FIREBASE_TYPE=
+FIREBASE_PROJECT_ID=
+FIREBASE_PRIVATE_KEY_ID=
+FIREBASE_PRIVATE_KEY=
+FIREBASE_CLIENT_EMAIL=
+FIREBASE_CLIENT_ID=
+FIREBASE_AUTH_URI=
+FIREBASE_TOKEN_URI=
+FIREBASE_AUTH_PROVIDER_X509_CERT_URL=
+FIREBASE_CLIENT_X509_CERT_URL=
+
 ```
 
 # **Utilización de dependencias**
@@ -63,7 +76,7 @@ PHONE_ADMIN= (Numero del administrador con prefijo internacional incluido)
 [**Documentación autocannon**](https://www.npmjs.com/package/autocannon)
 
 Utilizada en *src/utils/benchmark.js* para realizar un test de estres en el servidor.
-Se realiza con el servidor corriendo y luego el comando `npm test`
+Se realiza con el servidor corriendo y luego el comando `yarn test`
 
 ## *bcrypt*
 
@@ -126,13 +139,17 @@ Las vistas de ejs se encuentran en *src/views* mientras que las de handlebars se
 
 Express-session es utilizada para crear las sessions de los usuarios.
 Su configuracion se encuentra en *src/config.js*.
+## *firebase & firebase-admin*
 
-## *forever & forever-monitor*
+[**Documentación firebase**](https://www.npmjs.com/package/firebase)
+[**Documentación firebase-admin**](https://www.npmjs.com/package/firebase-admin)
+
+Firebase y firebase-admin son necesarias para utilizar y manejar la base de datos de Firestore.
+## *forever*
 
 [**Documentación forever**](https://www.npmjs.com/package/forever)
-[**Documentación forever-monitor**](https://www.npmjs.com/package/forever-monitor)
 
-Forever es una herramienta de CLI para asegurarse que la aplicación corra continuamente.
+Forever es una herramienta de CLI para asegurarse que la aplicación corra continuamente, incluso despues de un crasheo.
 
 ## *mongoose*
 
