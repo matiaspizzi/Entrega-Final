@@ -145,6 +145,7 @@ Su configuracion se encuentra en *src/config.js*.
 [**Documentación firebase-admin**](https://www.npmjs.com/package/firebase-admin)
 
 Firebase y firebase-admin son necesarias para utilizar y manejar la base de datos de Firestore.
+Su conexión se encuentra en *src/config.js*.
 ## *forever*
 
 [**Documentación forever**](https://www.npmjs.com/package/forever)
