@@ -21,11 +21,11 @@ En la consola del proyecto: `npm i --save`
 ## **Scripts**
 
 Iniciar la app con forever:
-`yarn start`
+`npm run start`
 Iniciar la app con nodemon:
-`yarn dev`
+`npm run dev`
 Iniciar test de autocannon:
-`yarn test`
+`npm run test`
 
 ## **Argumentos de entrada**:
 ```
@@ -34,7 +34,7 @@ Iniciar test de autocannon:
     --db / --database    se utiliza para elegir persistencia, mongo o memoria
 ```
 
-**Ejemplo:** yarn start --port 8080 --mode fork --database mongo
+**Ejemplo:** npm run start --port 8080 --mode fork --database mongo
 
 # **Variables de entorno**
 
