@@ -82,7 +82,7 @@ Se realiza con el servidor corriendo y luego el comando `yarn test`
 
 [**Documentación bcrypt**](https://www.npmjs.com/package/bcrypt)
 
-Utilizada en *src/models/user.model.js* y en *src/passport/local-auth.js* para encriptar las claves de los usuarios al momento de registrarse o ingresar.
+Utilizada en *src/persistencia/models/user.models.js* para encriptar las claves de los usuarios al momento de registrarse o ingresar.
 
 ## *cluster*
 
@@ -155,7 +155,7 @@ Forever es una herramienta de CLI para asegurarse que la aplicación corra conti
 
 [**Documentación mongoose**](https://www.npmjs.com/package/mongoose)
 
-Mongoose es una herramienta para modelado de objetos, es utilizado en *src/models* para modelar los schemas.
+Mongoose es una herramienta para modelado de objetos, es utilizado en *src/persistencia/models* para modelar los schemas.
 Su conexión se encuentra en *src/config.js* linea 43.
 
 ## *nodemailer*
@@ -163,7 +163,7 @@ Su conexión se encuentra en *src/config.js* linea 43.
 [**Documentación nodemailer**](https://www.npmjs.com/package/nodemailer)
 
 Nodemailer es utilizado para mandar notificaciones a emails.
-Es utilizado en *src/utils/nodemailer.js* para notificar al administrador de registros de usuarios y nuevas ordenes de compra.
+Es utilizado en *src/utils/nodemailer.utils.js* para notificar al administrador de registros de usuarios y nuevas ordenes de compra.
 
 ## *passport & passport-local*
 
@@ -171,7 +171,7 @@ Es utilizado en *src/utils/nodemailer.js* para notificar al administrador de reg
 [**Documentación passport-local**](https://www.npmjs.com/package/passport-local)
 
 Passport se ocupa de autenticar el registro y el ingreso de usuarios, mientras que passport-local es la estrategia de autenticación (en este caso autenticación local).
-Las estrategias están definidas en *src/passport/local-auth.js*, y es utilizado en *src/router/login.js* y *src/router/register.js*
+Las estrategias están definidas en *src/middlewares/passport.middlewares.js*, y es utilizado en *src/routes/login.routes.js* y *src/routes/register.routes.js*
 
 ## *socket.io*
 
@@ -185,7 +185,7 @@ Se utiliza en *src/server.js* y en varios archivos de *public/js*.
 [**Documentación twilio**](https://www.npmjs.com/package/twilio)
 
 Twilio es utilizado para enviar notificaciones como Nodemailer, solo que mediante mensajes de Whatsapp.
-Se define en *src/utils/twilio.js*.
+Se define en *src/utils/twilio.utils.js*.
 
 ## *winston*
 
@@ -193,14 +193,14 @@ Se define en *src/utils/twilio.js*.
 
 Winston es utilizado como logger, para mostrar mensajes info/warn/error en consola y para guardar registros localmente en *src/logs*.
 También se utiliza como middleware para mostrar las request de las rutas y sus status.
-Está definido en *src/utils/logger.js* y su middleware en *src/middlewares/logger.js*.
+Está definido en *src/utils/logger.utils.js* y su middleware en *src/middlewares/logger.middlewares.js*.
 
 ## *yargs*
 
 [**Documentación yargs**](https://www.npmjs.com/package/yargs)
 
 Yargs se utiliza para recibir argumentos desde la consola al momento de iniciar la aplicación.
-Su configuración se encuentra en *src/config.js*
+Su configuración se encuentra en *src/utils/yargs.utils.js*
 
 # **Otros**
 
