@@ -10,7 +10,7 @@ const config = {
     yarg: argv,
     port: argv.port,
     modo: argv.mode,
-    persistencia: argv.database,
+    persistencia: argv.db,
     cantProcesadores: os.cpus().length,
     mongo: {
         url: process.env.MONGO_ATLAS_URL,

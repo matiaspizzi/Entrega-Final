@@ -106,7 +106,7 @@ io.on("connection", async (socket) => {
 });
 
 // Iniciar servidor
-if (cluster.isPrimary && config.modo.toLowerCase() == "cluster") {
+if (cluster.isPrimary && config.modo == "cluster") {
     logger.info(`CANT PROCE ${config.cantProcesadores}`);
     logger.info(`PID MASTER ${process.pid}`);
     for (let i = 0; i < config.cantProcesadores; i++) {

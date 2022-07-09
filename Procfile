@@ -1,1 +1,1 @@
-web: yarn start --mode fork --database mongo
+web: npm run start --mode fork --db mongo

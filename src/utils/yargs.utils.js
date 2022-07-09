@@ -1,16 +1,14 @@
 const yargs = require('yargs/yargs')(process.argv.slice(2))
 
-const argv = yargs
-.alias({
-    p: 'port',
-    m: 'mode',
-    db: 'database'
-})
 .default({
-  port: process.env.PORT,
-  mode: 'fork', // 'fork' o 'cluster',
-  database: 'memoria' // 'memoria', 'mongo' o 'firebase'
+    port: process.env.PORT || 8080,
+    mode: 'fork',
+    database: 'mongo'
 })
-.argv
+.alias({
+    database: 'db',
+    mode: 'm',
+    port: 'p'
+})
 
-module.exports = argv
+module.exports = yargs.argv
