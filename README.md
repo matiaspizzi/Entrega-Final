@@ -31,7 +31,7 @@ Iniciar test de autocannon:
 ```
     --p / --port         se utiliza para definir el puerto
     --m / --mode         se utiliza para elegir entre fork o cluster
-    --db / --database    se utiliza para elegir persistencia, mongo o memoria
+    --db / --database    se utiliza para elegir persistencia, mongo, firebase o memoria
 ```
 
 **Ejemplo:** npm run start --port 8080 --mode fork --database mongo
