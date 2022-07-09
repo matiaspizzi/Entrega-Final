@@ -5,7 +5,7 @@
 ![TWILIO](https://img.shields.io/badge/Twilio-F22F46?style=for-the-badge&logo=Twilio&logoColor=white)
 ![BOOTSTRAP](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
 
-# **Tercer Entrega**
+# **Entrega Final**
 [![Coderhouse](./logo_coderhouse.png)](https://www.coderhouse.com/)
 
 * Podés visitar la pagina **[acá](https://entrega-final-backend.herokuapp.com/)**.
