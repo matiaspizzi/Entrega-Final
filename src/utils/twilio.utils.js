@@ -13,7 +13,7 @@ const twilioAdmin = async (user) => {
             body: `Nuevo pedido de compra de ${user.name}, ${user.email}`,
             from: `whatsapp:${process.env.TWILIO_PHONE}`,
             to: `whatsapp:${process.env.PHONE_ADMIN}`
-        }).then(message => logger.info("Mensaje a administrador enviado"));
+        }).then(logger.info("Mensaje a administrador enviado"));
     } catch (error) {
         logger.error(`${error}`);
     }
@@ -25,7 +25,7 @@ const twilioBuyer = async (receptor) => {
             body: 'Orden de compra recibida con éxito y en proceso',
             from: `whatsapp:${process.env.TWILIO_PHONE}`,
             to: `whatsapp:${receptor}`
-        }).then(message => logger.info("Mensaje a comprador enviado"));
+        }).then(logger.info("Mensaje a comprador enviado"));
     } catch (error) {
         logger.error(`${error}`);
     }
