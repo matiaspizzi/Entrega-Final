@@ -3,7 +3,7 @@ const IDao = require('../IDao')
 let carritoMemoryInstance = null;
 
 class CarritosMemoryDAO extends IDao {
-    constructor(){
+    constructor() {
         super()
         this.carritos = []
     }
@@ -33,7 +33,7 @@ class CarritosMemoryDAO extends IDao {
 
     saveProd(prod, cartId, cant) {
         let cart = this.carritos.find(cart => cart.id === cartId)
-        if(!cart){
+        if (!cart) {
             this.create(cartId)
             cart = this.carritos.find(cart => cart.id === cartId)
         }
@@ -47,7 +47,7 @@ class CarritosMemoryDAO extends IDao {
         const prodExists = cart.productos.find(product => product.id === prod.id)
         if (prodExists) prodExists.cantidad += cant
         else cart.productos.push(newProd)
-        return cart 
+        return cart
     }
 
     deleteProd(prod, cartId) {
@@ -56,10 +56,10 @@ class CarritosMemoryDAO extends IDao {
         cart.productos.splice(index, 1)
         return cart
     }
-    
+
     getById(id) {
         const cart = this.carritos.find(cart => cart.id == id)
-        if (cart) return cart 
+        if (cart) return cart
     }
 
     deleteById(id) {

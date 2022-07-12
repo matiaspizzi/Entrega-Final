@@ -53,12 +53,12 @@ class CarritosFirebaseDAO extends IDao {
             logger.error(error)
             return error;
         }
-    }  
+    }
 
     async saveProd(prod, cartId, cant) {
         try {
             let cart = await this.getById(cartId)
-            if(!cart) await this.create(cartId)
+            if (!cart) await this.create(cartId)
             cart = await this.getById(cartId)
             const newProd = {
                 id: prod.id,

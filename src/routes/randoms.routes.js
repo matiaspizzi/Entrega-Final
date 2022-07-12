@@ -5,7 +5,7 @@ const path = require('path')
 
 router.get('/randoms', (req, res) => {
     const cant = req.query.cant ? req.query.cant : 100000000
-    const child = fork(path.join(process.cwd(), '/src/utils/calcularRandom.js'))
+    const child = fork(path.join(process.cwd(), '/src/utils/calcularRandom.utils.js'))
     child.send({ cant: cant })
     child.on('message', (message) => {
         res.json(message)

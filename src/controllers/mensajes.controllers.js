@@ -34,7 +34,7 @@ const deleteById = async (id) => {
     } catch (error) {
         logger.error(error)
         throw error
-    }  
+    }
 }
 
 const deleteAll = async () => {

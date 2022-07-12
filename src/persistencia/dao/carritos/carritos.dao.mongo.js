@@ -66,13 +66,13 @@ class CarritosMongoDAO extends IDao {
         try {
             if (prod.id) {
                 const index = cart.productos.findIndex(e => e.id == prod.id)
-                if (index > -1) cart.productos[index].cantidad += cant 
+                if (index > -1) cart.productos[index].cantidad += cant
                 else cart.productos.push(newProd)
             }
             await this.collection.updateOne(
                 { id: cartId }, { $set: { productos: cart.productos } }
             )
-                return await this.getById(cartId)
+            return await this.getById(cartId)
         }
         catch (error) {
             logger.error(error)

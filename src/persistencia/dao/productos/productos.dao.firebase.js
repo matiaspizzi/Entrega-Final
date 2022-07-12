@@ -6,7 +6,7 @@ const IDao = require('../IDao.js')
 
 let productFirebaseInstance = null;
 
-class ProductosFirebaseDAO extends IDao{
+class ProductosFirebaseDAO extends IDao {
     constructor() {
         super()
         this.collection = firebase.firestore().collection(config.firebase.collections.productos)
@@ -62,7 +62,7 @@ class ProductosFirebaseDAO extends IDao{
             return error;
         }
     }
-    
+
     async deleteById(id) {
         try {
             const data = await this.getById(id)

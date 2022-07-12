@@ -23,7 +23,7 @@ const config = {
         }
     },
     session: {
-        store: MongoStore.create({ mongoUrl: `${process.env.MONGO_ATLAS_URL}`}),
+        store: MongoStore.create({ mongoUrl: `${process.env.MONGO_ATLAS_URL}` }),
         secret: process.env.SESSION_SECRET,
         resave: false,
         saveUninitialized: false,
@@ -38,16 +38,16 @@ const config = {
             mensajes: 'mensajes'
         },
         config: {
-            type : process.env.FIREBASE_TYPE,
-            project_id : process.env.FIREBASE_PROJECT_ID,
-            private_key_id : process.env.FIREBASE_PRIVATE_KEY_ID,
-            private_key : process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, '\n'),
-            client_email : process.env.FIREBASE_CLIENT_EMAIL,
-            client_id : process.env.FIREBASE_CLIENT_ID,
-            auth_uri : process.env.FIREBASE_AUTH_URI,
-            token_uri : process.env.FIREBASE_TOKEN_URI,
-            auth_provider_x509_cert_url : process.env.FIREBASE_AUTH_PROVIDER_X509_CERT_URL,
-            client_x509_cert_url : process.env.FIREBASE_CLIENT_X509_CERT_URL
+            type: process.env.FIREBASE_TYPE,
+            project_id: process.env.FIREBASE_PROJECT_ID,
+            private_key_id: process.env.FIREBASE_PRIVATE_KEY_ID,
+            private_key: process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, '\n'),
+            client_email: process.env.FIREBASE_CLIENT_EMAIL,
+            client_id: process.env.FIREBASE_CLIENT_ID,
+            auth_uri: process.env.FIREBASE_AUTH_URI,
+            token_uri: process.env.FIREBASE_TOKEN_URI,
+            auth_provider_x509_cert_url: process.env.FIREBASE_AUTH_PROVIDER_X509_CERT_URL,
+            client_x509_cert_url: process.env.FIREBASE_CLIENT_X509_CERT_URL
         }
     }
 }
@@ -56,7 +56,7 @@ mongoose.connect(config.mongo.url, {})
     .then(logger.info('Mongo Atlas conectado'))
     .catch(err => logger.error(err))
 
-if(config.persistencia == 'firebase'){
+if (config.persistencia == 'firebase') {
     firebase.initializeApp({
         credential: firebase.credential.cert(config.firebase.config)
     });

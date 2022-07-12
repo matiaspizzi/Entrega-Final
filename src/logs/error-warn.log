@@ -1,0 +1,60 @@
+[11/7/2022 03:00:18] [error]: listen EADDRINUSE: address already in use :::8080
+[11/7/2022 03:00:30] [error]: listen EADDRINUSE: address already in use :::8080
+[11/7/2022 03:00:46] [warn]: GET /favicon.ico no implementado
+[11/7/2022 03:03:47] [error]: bind EADDRINUSE null:8000
+[11/7/2022 03:03:47] [error]: bind EADDRINUSE null:8000
+[11/7/2022 03:03:47] [error]: bind EADDRINUSE null:8000
+[11/7/2022 03:03:48] [error]: bind EADDRINUSE null:8000
+[11/7/2022 03:03:48] [error]: bind EADDRINUSE null:8000
+[11/7/2022 03:03:48] [error]: bind EADDRINUSE null:8000
+[11/7/2022 03:03:48] [error]: bind EADDRINUSE null:8000
+[11/7/2022 03:03:48] [error]: bind EADDRINUSE null:8000
+[11/7/2022 03:03:48] [error]: bind EADDRINUSE null:8000
+[11/7/2022 03:03:48] [error]: bind EADDRINUSE null:8000
+[11/7/2022 03:03:48] [error]: bind EADDRINUSE null:8000
+[11/7/2022 03:03:48] [error]: bind EADDRINUSE null:8000
+[11/7/2022 03:04:00] [warn]: Worker, 9924 died 
+[11/7/2022 03:04:00] [warn]: Worker, 11520 died 
+[11/7/2022 03:04:00] [warn]: Worker, 19868 died 
+[11/7/2022 03:04:00] [warn]: Worker, 12696 died 
+[11/7/2022 03:04:00] [warn]: Worker, 19908 died 
+[11/7/2022 03:04:00] [warn]: Worker, 18804 died 
+[11/7/2022 03:04:00] [warn]: Worker, 3312 died 
+[11/7/2022 03:04:00] [warn]: Worker, 4544 died 
+[11/7/2022 03:04:00] [warn]: Worker, 16868 died 
+[11/7/2022 03:04:00] [warn]: Worker, 356 died 
+[11/7/2022 03:04:00] [warn]: Worker, 4800 died 
+[11/7/2022 03:04:00] [warn]: Worker, 8124 died 
+[11/7/2022 03:04:00] [warn]: Worker, 10404 died 
+[11/7/2022 03:04:04] [error]: bind EADDRINUSE null:8000
+[11/7/2022 03:04:04] [error]: bind EADDRINUSE null:8000
+[11/7/2022 03:04:04] [error]: bind EADDRINUSE null:8000
+[11/7/2022 03:04:04] [error]: bind EADDRINUSE null:8000
+[11/7/2022 03:04:04] [error]: bind EADDRINUSE null:8000
+[11/7/2022 03:04:04] [error]: bind EADDRINUSE null:8000
+[11/7/2022 03:04:04] [error]: bind EADDRINUSE null:8000
+[11/7/2022 03:04:05] [error]: bind EADDRINUSE null:8000
+[11/7/2022 03:04:05] [error]: bind EADDRINUSE null:8000
+[11/7/2022 03:04:05] [error]: bind EADDRINUSE null:8000
+[11/7/2022 03:04:05] [error]: bind EADDRINUSE null:8000
+[11/7/2022 03:04:05] [error]: bind EADDRINUSE null:8000
+[11/7/2022 03:05:00] [warn]: Worker, 6504 died 
+[11/7/2022 03:05:00] [warn]: Worker, 5848 died 
+[11/7/2022 03:05:00] [warn]: Worker, 11100 died 
+[11/7/2022 03:05:00] [warn]: Worker, 18172 died 
+[11/7/2022 03:05:00] [warn]: Worker, 10688 died 
+[11/7/2022 03:05:00] [warn]: Worker, 18072 died 
+[11/7/2022 03:05:00] [warn]: Worker, 15576 died 
+[11/7/2022 03:05:00] [warn]: Worker, 6984 died 
+[11/7/2022 03:05:00] [warn]: Worker, 13676 died 
+[11/7/2022 03:05:00] [warn]: Worker, 18672 died 
+[11/7/2022 03:05:00] [warn]: Worker, 12392 died 
+[11/7/2022 03:05:00] [warn]: Worker, 20076 died 
+[11/7/2022 03:05:00] [warn]: Worker, 14568 died 
+[11/7/2022 03:05:56] [error]: Cannot read properties of undefined (reading 'productos')
+[11/7/2022 03:45:46] [warn]: Worker, 20264 died 
+[12/7/2022 12:57:31] [warn]: GET /calcularrandoms no implementado
+[12/7/2022 12:57:31] [warn]: GET /favicon.ico no implementado
+[12/7/2022 12:57:57] [warn]: GET /randoms no implementado
+[12/7/2022 12:58:00] [warn]: GET /randoms no implementado
+[12/7/2022 12:58:10] [warn]: GET /randoms no implementado

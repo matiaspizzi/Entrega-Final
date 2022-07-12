@@ -19,4 +19,4 @@ function run(url) {
     })
 }
 
-run('http://localhost:8080/home')
+run('http://localhost:8080/api/randoms')

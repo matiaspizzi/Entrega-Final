@@ -3,7 +3,7 @@ const IDao = require('../IDao')
 let messageMemoryInstance = null;
 
 class MessagesMemoryDAO extends IDao {
-    constructor(){
+    constructor() {
         super()
         this.messages = []
     }
@@ -23,7 +23,7 @@ class MessagesMemoryDAO extends IDao {
         this.messages.push(data)
         return this.messages[this.messages.length - 1]
     }
-    
+
     getById(id) {
         return this.messages.find(data => data.id === id)
     }

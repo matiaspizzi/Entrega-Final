@@ -9,16 +9,19 @@ const logger = require("./utils/logger.utils.js");
 const loggerRoutes = require("./middlewares/logger.middlewares.js");
 const http = require("http");
 const { Server: Socket } = require("socket.io");
-const { sessionMiddleware, wrap } = require("./middlewares/session.middlewares.js");
+const {
+    sessionMiddleware,
+    wrap,
+} = require("./middlewares/session.middlewares.js");
 const User = require("./persistencia/models/user.models.js");
 
 const app = express();
 const server = http.createServer(app);
 const io = new Socket(server);
 
-const productosController = require('./controllers/productos.controllers.js')
-const mensajesController = require('./controllers/mensajes.controllers.js')
-const carritosController = require('./controllers/carritos.controllers.js')
+const productosController = require("./controllers/productos.controllers.js");
+const mensajesController = require("./controllers/mensajes.controllers.js");
+const carritosController = require("./controllers/carritos.controllers.js");
 
 // Middlewares y otros
 app.use(express.json());
@@ -44,7 +47,6 @@ app.set("view engine", "ejs");
 app.set("views", __dirname + "/views");
 
 //Rutas
-app.use("/api", require("./routes/mock.routes.js"));
 app.use("/api", require("./routes/randoms.routes.js"));
 app.use("/", require("./routes/login.routes.js"));
 app.use("/", require("./routes/register.routes.js"));
@@ -99,9 +101,9 @@ io.on("connection", async (socket) => {
         io.sockets.emit("mensajes", await mensajesController.getAll());
     });
     //Carrito
-    const carrito = await carritosController.getById(user.email)
-    let productos =[]
-    if(carrito) productos = carrito.productos
+    const carrito = await carritosController.getById(user.email);
+    let productos = [];
+    if (carrito) productos = carrito.productos;
     socket.emit("carrito", productos);
 });
 

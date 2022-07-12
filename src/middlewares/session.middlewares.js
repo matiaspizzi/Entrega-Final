@@ -6,7 +6,7 @@ const config = require('../config.js')
 
 const sessionMiddleware = session(config.session)
 
-const wrap = (expressMiddleware) => (socket, next) => 
+const wrap = (expressMiddleware) => (socket, next) =>
     expressMiddleware(socket.request, {}, next)
-    
+
 module.exports = { sessionMiddleware, wrap }

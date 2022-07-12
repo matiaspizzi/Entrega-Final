@@ -1,5 +1,4 @@
 const inputMensaje = document.getElementById('inputMensaje')
-const btnEnviar = document.getElementById('btnEnviar')
 const formPublicarMensaje = document.getElementById('formPublicarMensaje')
 
 formPublicarMensaje.addEventListener('submit', e => {
@@ -18,7 +17,7 @@ socket.on('mensajes', async mensajes => {
     document.getElementById('mensajes').innerHTML = html
 })
 
-async function showMensajes(mensajes) {
+function showMensajes(mensajes) {
     return fetch('../plantillas/mensajes.hbs')
         .then(respuesta => respuesta.text())
         .then(plantilla => {
